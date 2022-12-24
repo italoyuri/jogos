@@ -19,7 +19,7 @@ pontuacao = 1000
 while nivel not in [1, 2, 3]:
     print("Qual nível de dificuldade?")
     print("(1) Fácil (2) Médio (3) Difícil")
-    print('*' * 33)
+    print()
     try:
         nivel = int(input("Defina o nível: "))
         if nivel == 0:
@@ -27,11 +27,11 @@ while nivel not in [1, 2, 3]:
         if nivel not in [1, 2, 3]:
             print("Digite apenas 1, 2 ou 3")
             print("Digite 0 para sair")
-            print('*' * 33)
+            print()
     except Exception as e:
         print("Digite apenas 1, 2 ou 3 para jogar")
         print("Digite 0 para sair")
-        print('*' * 33)
+        print()
 
 if nivel == 1:
     total_de_tentativas = 20
@@ -41,18 +41,17 @@ else:
     total_de_tentativas = 5
 
 for rodada in range(1, total_de_tentativas + 1):
-    print("Tentativa {} de {}"
-          .format(rodada, total_de_tentativas))
+    print(f"Tentativa {rodada} de {total_de_tentativas}")
     try:
         chute = int(
-            input("Digite um número entre {} e {}: "
-                  .format(numero_secreto_ini, numero_secreto_end))
+            input(f"Digite um número entre {numero_secreto_ini} e {numero_secreto_end}: ")
         )
-        print("Você digitou ", chute)
+        print()
+        print(f"Você digitou {chute}")
+        print()
 
         if chute < numero_secreto_ini or chute > numero_secreto_end:
-            print("Você deve digitar um número entre {} e {}!"
-                  .format(numero_secreto_ini, numero_secreto_end))
+            print(f"Você deve digitar um número entre {numero_secreto_ini} e {numero_secreto_end}!")
             continue
 
         acertou = chute == numero_secreto
@@ -64,13 +63,17 @@ for rodada in range(1, total_de_tentativas + 1):
             pontuacao -= pontos_perdidos
         if acertou:
             print(f"Você acertou e fez {pontuacao} pontos!")
+            print()
             break
         elif menor:
             print("Você errou! O seu chute foi menor do que o número secreto")
+            print()
         elif maior:
             print("Você errou! O seu chute foi maior do que o número secreto")
+            print()
     except Exception as e:
         print("Erro:", e)
-
+if not acertou:
+    print(f"O número secreto era {numero_secreto} e você fez {pontuacao} pontos")
 print("Fim do jogo")
 
