@@ -1,10 +1,11 @@
 import random
 import sys
 
+import generics
+
+
 def jogar():
-    print('*'*40)
-    print('{:*^40}'.format("Bem-vindo ao jogo de advinhação!"))
-    print('*'*40)
+    generics.imprime_mensagem_abertura(__file__)
 
     numero_secreto_ini = 1
     numero_secreto_end = 100
@@ -58,7 +59,7 @@ def jogar():
             acertou = chute == numero_secreto
             menor = chute < numero_secreto
             maior = chute > numero_secreto
-            pontos_perdidos = abs(chute-numero_secreto)
+            pontos_perdidos = abs(chute - numero_secreto)
 
             if not acertou:
                 pontuacao -= pontos_perdidos
@@ -76,7 +77,8 @@ def jogar():
             print("Erro:", e)
     if not acertou:
         print(f"O número secreto era {numero_secreto} e você fez {pontuacao} pontos")
-    print("Fim do jogo")
+    generics.mensagem_final()
+
 
 if __name__ == "__main__":
     jogar()
