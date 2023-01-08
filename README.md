@@ -10,7 +10,7 @@ Jogo de adivinhação proposto no curso da Alura
 | :fire: Desafio     | https://url-do-desafio.com.br
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](https://publicdomainvectors.org/photos/thimbles-game.jpg#vitrinedev)
+![copos](https://publicdomainvectors.org/photos/thimbles-game.jpg#vitrinedev)
 
 Python: começando com a linguagem
 
