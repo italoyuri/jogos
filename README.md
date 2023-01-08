@@ -12,8 +12,6 @@ Jogo de adivinhação proposto no curso da Alura
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![copos](https://publicdomainvectors.org/photos/thimbles-game.jpg#vitrinedev)
 
-Python: começando com a linguagem
-
 ## Detalhes do projeto
 
 Jogo de adivinhação proposto no curso da Alura 
